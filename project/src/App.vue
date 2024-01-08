@@ -7,15 +7,18 @@
     <router-link to="/testimonial">Testimonial</router-link>
     <router-link to="/contact">Contact</router-link>
   </nav> -->
-  <Navbar/>
+  <Navbar></Navbar>
+  <Footer></Footer>
   <router-view/>
 </template>
 <script>
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 
 export default{
   components:{
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>
@@ -32,7 +35,7 @@ export default{
    
   }
 body{
-  background-color: black;
+  background-color: black !important;
 }
 
 </style>
