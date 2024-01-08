@@ -1,0 +1,22 @@
+{
+    "data":[ 
+        {"intro":"My name is Warren"},
+        {"projects":[{
+            "id":1,
+            "projectName":"Netflix",
+            "github":"random project"
+        },
+        {
+            "id":2,
+            "projectName":"E-commerce Website",
+            "github":"random project"
+        }
+        ]
+    }
+
+    
+    
+    ]
+   
+
+}
