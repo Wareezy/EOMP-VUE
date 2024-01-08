@@ -1,13 +1,51 @@
 <template>
     <div>
-        <nav>
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link to="/resume">Resume</router-link>
-    <router-link to="/projects">Projects</router-link>
-    <router-link to="/testimonial">Testimonial</router-link>
-    <router-link to="/contact">Contact</router-link>
-  </nav>  
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img id="logo" src="https://drive.google.com/uc?id=1-JXKNJq1IGQVVzW_ga0ig5HRCbdShMfb" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon text-white"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/">Home</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/about">About</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/resume">Resume</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/projects">Projects</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/testimonial">Testimonial</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/contact">Contact</router-link>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto" id="logoPos" >
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/Wareezy">
+                            <img src="https://drive.google.com/uc?id=1pydipr12drobctkTA4gENxBI-7u7mHLW" id="logoImg1" >
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/warren-jaftha-b36338208">
+                            <img src="https://drive.google.com/uc?id=1KNBr-1-o7cG_wrX9_Kv3pglftm_5Xd15" id="logoImg2">
+                        </a>
+                    </li>
+                </ul>
+    </div>
+  </div>
+</nav>
+
+
     </div>
 </template>
 <script>
@@ -25,7 +63,7 @@ export default {
     /* font-weight: bold; */
     display: inline-block;
  position: relative;
- color: white;
+ color: white ;
  font-size:20px;
  text-decoration: none;
  margin: 0 10px;
@@ -55,5 +93,22 @@ export default {
 nav a:hover::after {
  transform: scaleX(1);
  transform-origin: bottom left;
+}
+#logo{
+  width:100px;
+  height:100px;
+ 
+}
+#logoImg1{
+  
+  width:80px;
+  height:46px;
+}
+#logoImg2{
+ 
+
+width:60px;
+  height:60px;
+  margin-top:-11px;
 }
 </style>
