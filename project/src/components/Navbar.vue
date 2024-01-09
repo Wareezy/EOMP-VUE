@@ -105,8 +105,6 @@ nav a:hover::after {
   height:46px;
 }
 #logoImg2{
- 
-
 width:60px;
   height:60px;
   margin-top:-11px;
