@@ -47,26 +47,31 @@
             </div>
           </div>
           <div class="contactForm">
-            <form  id="formOfContact" action="https://formspree.io/f/mdorqepn" method="POST">
+            <form  id="formOfContact" action="https://formspree.io/f/mayrnwqo" method="POST">
               <h2>Send Message</h2>
               <div class="inputBox">
+                <!-- validation is included by each field with a error message that gets displayed -->
                 <input type="name" name="name" required="required" data-sendingFirstName/>
                 <span>First Name</span>
               </div>
               <div class="inputBox">
+                <!-- validation is included by each field with a error message that gets displayed -->
                 <input type="name" name="name" required="required" data-sendingLastName />
                 <span>Surname</span>
               </div>
               <div class="inputBox">
+                <!-- validation is included by each field with a error message that gets displayed -->
                 <input type="number" name="number" required="required"  data-sendingNumber/>
                 <span>Number</span>
               </div>
               <div class="inputBox">
+                <!-- validation is included by each field with a error message that gets displayed -->
                 <input type="email" name="email" required="required" data-sendingEmail/>
                 <span>Email</span>
               </div>
 
               <div class="inputBox">
+                <!-- validation is included by each field with a error message that gets displayed -->
                 <textarea required="required" name="message" data-sendingMessage></textarea>
                 <span>Type your message...</span>
               </div>
@@ -83,7 +88,31 @@
 <script>
 export default {
     
-}
+  mounted() {
+    // Call the initializeForm method when the component is mounted
+    this.initializeForm();
+  },
+  methods: {
+    initializeForm() {
+      // declaring the button that will be used to send the data to form spree
+      let sendingButton = document.querySelector("[sendingButton]");
+
+      // calling the sending button and adding an event listener to the button that, when clicked, has a setTimeout attached to it
+      sendingButton.addEventListener("click", () => {
+        // the set timeout is set to 1 second and within the setTimeout, we are calling the clearTheForm method
+        setTimeout(this.clearTheForm, 1000);
+      });
+    },
+    clearTheForm() {
+      // setting all the values to blank, this will reset the values
+      document.querySelector("[data-sendingMessage]").value = "";
+      document.querySelector("[data-sendingFirstName]").value = "";
+      document.querySelector("[data-sendingEmail]").value = "";
+      document.querySelector("[data-sendingLastName]").value = "";
+      document.querySelector("[data-sendingNumber]").value = "";
+    },
+  },
+};
 </script>
 <style >
 #contactPara{
