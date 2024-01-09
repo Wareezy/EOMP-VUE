@@ -30,37 +30,57 @@ export default {
 </script>
 
 <style>
+
+
 #homeImage {
-  margin-top: -270px;
+  margin-top: -290px;
   margin-right: -1160px;
-  transition: transform 0.3s ease-in-out; 
 }
 
-#homeImage:hover {
-  transform: scale(1.1); 
+.textHome {
+  margin-top: 300px;
+  margin-right: 900px;
 }
 
-
-.textHome{
-  margin-top:300px;
-  margin-right:900px;
+#homeName {
+  position: absolute;
+  margin-top: -70px;
+  margin-left: 80px;
 }
 
-#homeName{
-  position:absolute;
-  margin-top:-70px;
-  margin-left:80px;
+#homeTitle {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 80px;
+}
 
+#homeDescription {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 80px;
 }
-#homeTitle{
-  position:absolute;
-  margin-top:-30px;
-  margin-left:80px;
-}
-#homeDescription{
-  position:absolute;
-  margin-top:15px;
-  margin-left:80px;
+
+/* Media Query for Small Screens (e.g., Mobile Devices) */
+@media screen and (max-width: 768px) {
+  #homeImage {
+    margin-top: 30px;
+    margin-right: 0;
+  }
+
+  .textHome {
+    margin-top: 20px;
+    margin-right: 0;
+    text-align: center;
+    margin-top:50px
+  }
+
+  #homeName,
+  #homeTitle,
+  #homeDescription {
+    position: relative;
+    margin: 0;
+    text-align: center;
+  }
 }
 
 </style>
