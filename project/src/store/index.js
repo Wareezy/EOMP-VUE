@@ -19,9 +19,15 @@ about:[],
   },
   actions: {
     async fetchHome(context){
-      let res=await fetch(dataUrl)
+      try{
+        let res=await fetch(dataUrl)
       let {home}=await res.json()
       context.commit('setHome',home)
+    }
+    catch(error){
+      console.error('There was an error when fetching this particular data', error)
+    }
+      
     },
     async fetchAbout(context){
     let res=await fetch(dataUrl)
