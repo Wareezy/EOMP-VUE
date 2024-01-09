@@ -1,6 +1,6 @@
 <template>
     <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="/">
       <img id="logo" src="https://drive.google.com/uc?id=1-JXKNJq1IGQVVzW_ga0ig5HRCbdShMfb" alt="Logo">
@@ -94,10 +94,21 @@ nav a:hover::after {
  transform: scaleX(1);
  transform-origin: bottom left;
 }
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 #logo{
   width:100px;
   height:100px;
- 
+  animation: pulsate 2s infinite;
 }
 #logoImg1{
   
@@ -105,8 +116,8 @@ nav a:hover::after {
   height:46px;
 }
 #logoImg2{
-width:60px;
-  height:60px;
-  margin-top:-11px;
+width:55px;
+  height:55px;
+  margin-top:-5px;
 }
 </style>

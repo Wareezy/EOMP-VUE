@@ -90,4 +90,36 @@ margin-top:120px;
 margin-left:80px
 
 }
+
+@media screen and (max-width: 768px) {
+  #aboutImage {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    margin-top: 500px;
+  }
+
+  #titleHome {
+    margin: 20px 0 0;
+    text-align: center;
+    font-size: 40px;
+    margin-top: -10px;
+    margin-left: 170px;
+  }
+
+  #textAbout {
+    position: absolute;
+    margin-top: 80px;
+    text-align: center;
+    padding: 0 40px;
+    
+  }
+
+  #textAbout p {
+    position: relative;
+    margin: 5px 0;
+    text-align: left;
+  }
+}
+
 </style>
