@@ -2,7 +2,7 @@
     <div>
         <div v-if="projects && projects.length > 0">
         <!-- this chunk of code is only used to call and display the 1 object which is found in the testimonials array -->
-        <div class="textHome" v-if="projects[0].titleProjects">
+        <div class="textProjects" v-if="projects[0].titleProjects">
           <div>
             <!-- here we are actually displaying it when calling the array testimonials we refer to the first object which is 0 and then we use dot
             notation to reference values that is inside the object like title and description
@@ -20,9 +20,9 @@ to only start looping from that point onwards
           <div class="card mb-4" style="width:18rem;">
             <img id="testimonialImage" :src="info.image" alt="Cover Image">
             <div class="card-body">
-            <h2 class="card-title">{{ info.name }}</h2>
-            <h5>{{ info.github }}</h5>
-            <p class="card-text">{{ info.netlify }}</p>
+            <h5 class="card-title">{{ info.name }}</h5>
+            <a :href="info.gitHub" id="btnGIT" class="btn btn-warning">Github</a>
+            <a :href= "info.netlify" id="btnNET" class="btn btn-warning">Netlify</a>
             </div>
           </div>
         </div>
@@ -48,5 +48,22 @@ export default {
 }
 </script>
 <style >
-    
+    .card img {
+    height: 200px; /* Set your desired height */
+    object-fit: cover; /* This property ensures the image covers the entire space while maintaining aspect ratio */
+  }
+
+  #titleProjects{
+    position:absolute;
+    margin-top:-130px;
+    margin-left:605px;
+  }
+
+.grids{
+  margin-top:190px;
+}
+#btnGIT {
+    margin-right: 10px; /* Adjust the margin-right value as needed for the desired spacing */
+  }
+
 </style>

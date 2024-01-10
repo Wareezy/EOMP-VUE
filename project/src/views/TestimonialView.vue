@@ -98,11 +98,16 @@ to only start looping from that point onwards
     }
   }
 
-  .card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
+  .card:hover {
+    transform: scale(1.05); /* Increase the scale on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on hover */
+  }
+
+  
 
 
   </style>
