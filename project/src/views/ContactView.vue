@@ -129,9 +129,11 @@ export default {
   align-items: center;
   flex-direction: column;
   background-size: cover;
+  font-size:20px;
 }
 #headingContact{
-  margin-top:100px
+  margin-top:100px;
+  font-size:45px
 }
 .containerContact {
   width: 100%;

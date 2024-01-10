@@ -112,12 +112,12 @@ nav a:hover::after {
 }
 #logoImg1{
   
-  width:80px;
-  height:46px;
+  width:60px;
+  height:36px;
 }
 #logoImg2{
-width:55px;
-  height:55px;
+width:45px;
+  height:45px;
   margin-top:-5px;
 }
 </style>
