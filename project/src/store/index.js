@@ -6,6 +6,7 @@ export default createStore({
 home:[],
 about:[],
 testimonials:[],
+projects:[]
     
   },
   getters: {
@@ -19,6 +20,9 @@ testimonials:[],
     },
     setTestimonials(state,value){
       state.testimonials=value
+    },
+    setProjects(state,value){
+      state.projects=value
     }
   },
   actions: {
@@ -30,8 +34,7 @@ testimonials:[],
     }
     catch(error){
       console.error('There was an error when fetching this particular data', error)
-    }
-      
+    }  
     },
     async fetchAbout(context){
     let res=await fetch(dataUrl)
@@ -39,12 +42,16 @@ testimonials:[],
     context.commit('setAbout',about)
 },
 
-
-
 async fetchTestimonials(context){
   let res=await fetch(dataUrl)
   let {testimonials}=await res.json()
   context.commit('setTestimonials',testimonials)
+},
+
+async fetchProjects(context){
+  let res=await fetch(dataUrl)
+  let {projects}=await res.json()
+  context.commit('setProjects',projects)
 }
   },
   

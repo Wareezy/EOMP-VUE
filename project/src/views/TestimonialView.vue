@@ -50,18 +50,59 @@ to only start looping from that point onwards
   };
   </script>
   <style>
-  .grids{
-    margin-left:150px;
+ 
+  .grids {
+    margin-left: 150px;
   }
-  #title{
-    position:absolute;
-    margin-top:-230px;
-    margin-left:630px;
+
+  #title {
+    position: absolute;
+    margin-top: -230px;
+    margin-left: 650px;
   }
-  #titleDescription{
-    position:absolute;
-    margin-top:-140px;
-    margin-left:350px; 
-    font-size: 35px;
+
+  #titleDescription {
+    position: absolute;
+    margin-top: -140px;
+    margin-left: 450px;
+    font-size: 28px;
   }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col-md-4 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1;
+  }
+
+  @media (max-width: 768px) {
+    #title {
+      margin-left: 170px;
+    }
+
+    #titleDescription {
+      margin-left: 10px;
+      font-size: 23px;
+    }
+
+    .grids {
+      margin-top: 300px;
+      margin-left: 100px;
+    }
+  }
+
+  .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+
+
+
   </style>
