@@ -5,6 +5,7 @@ export default createStore({
   state: {
 home:[],
 about:[],
+testimonials:[],
     
   },
   getters: {
@@ -15,6 +16,9 @@ about:[],
     },
     setAbout(state,value){
       state.about=value
+    },
+    setTestimonials(state,value){
+      state.testimonials=value
     }
   },
   actions: {
@@ -33,8 +37,17 @@ about:[],
     let res=await fetch(dataUrl)
     let {about}=await res.json()
     context.commit('setAbout',about)
+},
+
+
+
+async fetchTestimonials(context){
+  let res=await fetch(dataUrl)
+  let {testimonials}=await res.json()
+  context.commit('setTestimonials',testimonials)
 }
   },
+  
   modules: {
   }
 })

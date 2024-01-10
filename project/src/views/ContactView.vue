@@ -1,8 +1,8 @@
 
       <template >
-        <img id="location" src="https://drive.google.com/uc?id=1fzVI2w-rWYu7swGpmdoAJaLEkrqVErGC">
+        <!-- <img id="location" src="https://drive.google.com/uc?id=1fzVI2w-rWYu7swGpmdoAJaLEkrqVErGC">
         <img id="phone" src="https://drive.google.com/uc?id=1dHSS7V8w6iEMTo0RXn9d-7_pzyQFKGgk">
-        <img id="email" src="https://drive.google.com/uc?id=1GlWmEnpgGeOW8zdsEybxTou8yFNVxxD_">
+        <img id="email" src="https://drive.google.com/uc?id=1GlWmEnpgGeOW8zdsEybxTou8yFNVxxD_"> -->
 
     <div>
         <section  id="cont">
@@ -17,7 +17,9 @@
           <div class="contactInfo">
             <div class="box">
               <div class="icon">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <div id="location">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                </div>
               </div>
               <div class="text">
                 <h3>Address</h3>
@@ -29,7 +31,9 @@
 
             <div class="box">
               <div class="icon">
+                <div id="phone">
                 <i class="fa fa-phone" aria-hidden="true"></i>
+              </div>
               </div>
               <div class="text">
                 <h3>Phone</h3>
@@ -38,7 +42,9 @@
             </div>
             <div class="box">
               <div class="icon">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <div id="envelope">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </div>
               </div>
               <div class="text">
                 <h3>Email</h3>
@@ -221,28 +227,16 @@ export default {
   font-size: 18px;
 }
 #location{
-    position:absolute;
-    margin-left:-470px;
-    margin-top:430px;
-    width:50px;
-    height:40px;
+  font-size: 30px;
 }
 #phone{
-    position:absolute;
-    margin-left:-470px;
-    margin-top:630px;
-    width:50px;
-    height:40px;
-}
-#email{
-    position:absolute;
-    margin-left:-470px;
-    margin-top:752px;
-    width:50px;
-    height:40px;
+  font-size: 30px;
 }
 
-@media screen and (max-width: 768px) {
- 
+#envelope{
+  font-size: 30px;
 }
+
+
+
 </style>
