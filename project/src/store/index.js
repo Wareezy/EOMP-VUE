@@ -9,7 +9,8 @@ testimonials:[],
 projects:[],
 education:[],
 skills:[],
-resumeContact:[]
+resumeContact:[],
+workExperience:[]
     
   },
 
@@ -38,6 +39,9 @@ resumeContact:[]
     setResumeContact(state,value){
       state.resumeContact=value
     },
+    setWorkExperience(state,value){
+      state.workExperience=value
+    }
   },
   actions: {
     async fetchHome(context){
@@ -127,6 +131,17 @@ catch(error){
   
 },
 
+async fetchWorkExperience(context){
+  try{
+    let res=await fetch(dataUrl)
+  let {workExperience}=await res.json()
+  context.commit('setWorkExperience',workExperience)
+}
+catch(error){
+  console.error('There was an error when fetching this particular data', error)
+}
+  
+},
 
 
   },

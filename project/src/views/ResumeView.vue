@@ -1,7 +1,8 @@
 <template >
     <div>
         <div>
-            <div v-if="education && resumeContact && resumeContact.length && education.length > 0 ">
+            <div
+                v-if="education && resumeContact && skills && workExperience && resumeContact.length && education.length && skills.length && workExperience.length > 0">
                 <!-- this chunk of code is only used to call and display the 1 object which is found in the resume array -->
                 <div class="textProjects"
                     v-if="education[0].heading && education[0].name && education[0].title && education[0].image">
@@ -41,18 +42,66 @@
 
 
                 </div>
-                
+
                 <div v-for="info in resumeContact" :key="info.heading">
-                    <h5>{{ info.heading }}</h5>
-                    <h5>{{ info.phone }}</h5>
-                    <h5>{{ info.email }}</h5>
-                    <h5>{{ info.address }}</h5>
+                    <div id="resumeContact">
+                        <h5>{{ info.heading }}</h5>
+                        <h5>{{ info.phone }}</h5>
+                        <h5>{{ info.email }}</h5>
+                        <h5>{{ info.address }}</h5>
+                    </div>
                 </div>
+
+                <div v-if="skills[0].heading">
+                    <div id="resumeSkills">
+                        <h1 id="">{{ skills[0].heading }}</h1>
+                    </div>
+
+                </div>
+                <div id="resumeEnvelope" class="fa fa-envelope"></div>
+                <div id="resumePhone" class="fa fa-phone"></div>
+                <div id="resumeLocation" class="fas fa-map-marker-alt"></div>
+                <div class="grids">
+                    <div class="row">
+                        <div class="col-md-4" v-for="info in skills.slice(1)" :key="info.title">
+                            <div class="card mb-4" style="width:18rem;">
+                                <img id="testimonialImage" :src="info.image" alt="Cover Image">
+                                <div class="card-body">
+                                    <h2 class="card-title">{{ info.title }}</h2>
+                                    <p class="card-text">{{ info.experience }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div v-if="workExperience[0].heading">
+                    <div id="workHeading">
+                        <h1 id="">{{ workExperience[0].heading }}</h1>
+                    </div>
+
+                </div>
+                <div v-for="info in workExperience.slice(1)" :key="info.id">
+
+                    <div id="work">
+                        <h5 id="description">{{ info.description }}</h5>
+                        <h5 id="year">{{ info.duration }}</h5>
+                        <h5 id="type">{{ info.reference }}</h5>
+                    </div>
+
+
+                </div>
+                <div id="timeWork"></div>
+                <div id="dot1Work"></div>
+                <div id="dot2Work"></div>
+            </div>
+            <div v-else>
+                <p>No information available.</p>
             </div>
             <!-- <div v-if="resumeContact && resumeContact.length > 0"> -->
-                
+
             <!-- </div> -->
         </div>
+
     </div>
 </template>
 <script>
@@ -67,13 +116,17 @@ export default {
         skills() {
             return this.$store.state.skills;
         },
-        
+        workExperience() {
+            return this.$store.state.workExperience;
+        }
+
 
     },
     mounted() {
         this.$store.dispatch('fetchEducation');
         this.$store.dispatch('fetchSkills');
         this.$store.dispatch('fetchResumeContact');
+        this.$store.dispatch('fetchWorkExperience');
     }
 }
 </script>
@@ -150,14 +203,12 @@ export default {
 #time {
     position: absolute;
     width: 3px;
-    margin-top:23px;
+    margin-top: 23px;
     margin-left: 870px;
     background-color: #fff;
-    /* Set to white */
     height: 410px;
-    /* Adjust the height as needed */
     margin-right: 10px;
-    /* Adjust the margin as needed */
+
 }
 
 
@@ -193,4 +244,88 @@ export default {
     display: inline-block;
     margin-left: 102px;
     margin-top: 375px;
-}</style>
+}
+
+#resumeContact {
+    position: absolute;
+    margin-left: 400px;
+    text-align: left;
+    margin-top: -390px;
+}
+
+#resumeLocation {
+    position: absolute;
+    margin-left: -295px;
+    margin-top: -290px;
+}
+
+#resumeEnvelope {
+    position: absolute;
+    margin-left: -297px;
+    margin-top: -321px;
+}
+
+#resumePhone {
+    position: absolute;
+    margin-left: -297px;
+    margin-top: -355px;
+}
+
+#grids {
+    position: absolute;
+}
+
+#resumeSkills {
+    position: absolute;
+    margin-left: 635px;
+    margin-top: 90px;
+}
+
+#workHeading {
+    position: absolute;
+    margin-left: 542px;
+    margin-top: 30px;
+}
+
+#work {
+    margin-top: 140px;
+    margin-bottom: 80px;
+    margin-left: 200px;
+    text-align: left;
+    padding-bottom: 0px;
+}
+
+#timeWork {
+    width: 3px;
+    margin-top: -410px;
+    margin-left: 150px;
+    background-color: #fff;
+    height: 410px;
+    margin-right: 10px;
+
+}
+
+
+
+#dot1Work {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -530px;
+    margin-top: -359px;
+}
+
+#dot2Work {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -530px;
+    margin-top: -150px;
+}
+</style>
