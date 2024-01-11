@@ -11,7 +11,8 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <router-link class="nav-link text-white" to="/">Home</router-link>
+          <router-link class="nav-link text-white" to="/" exact
+            active-class="router-link-active">Home</router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link text-white" to="/about">About</router-link>
@@ -59,8 +60,8 @@ export default {
 
   }
 
-  nav a {
-    /* font-weight: bold; */
+  nav a{
+     font-weight: bold; 
     display: inline-block;
  position: relative;
  color: white ;
@@ -70,13 +71,13 @@ export default {
  transition: color 0.3s ease-in-out;
   }
 
-  nav a.router-link-exact-active {
-    color: orange;
-  }
+nav a.router-link-active {
+  color: orange;
+}
 
   /* nav a:hover {
     color: orangered; 
-  } */
+  }  */
   nav a::after {
  content: '';
  position: absolute;
