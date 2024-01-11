@@ -3,7 +3,7 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <img id="logo" src="https://drive.google.com/uc?id=1-JXKNJq1IGQVVzW_ga0ig5HRCbdShMfb" alt="Logo">
+      <img id="logo" src="https://i.imgur.com/9aCiQmp.png" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon text-white"></span>
@@ -31,13 +31,13 @@
       </ul>
       <ul class="navbar-nav ml-auto" id="logoPos" >
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/Wareezy">
-                            <img src="https://drive.google.com/uc?id=1pydipr12drobctkTA4gENxBI-7u7mHLW" id="logoImg1" >
+                        <a id="github" class="fab fa-github" href="https://github.com/Wareezy">
+                            <!-- <img src="https://i.imgur.com/A2e3hZ8.png" id="logoImg1" > -->
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/warren-jaftha-b36338208">
-                            <img src="https://drive.google.com/uc?id=1KNBr-1-o7cG_wrX9_Kv3pglftm_5Xd15" id="logoImg2">
+                        <a id="linked" class="fab fa-linkedin" href="https://www.linkedin.com/in/warren-jaftha-b36338208">
+                            <!-- <img src="https://i.imgur.com/aI6gALz.png" id="logoImg2"> -->
                         </a>
                     </li>
                 </ul>
@@ -74,9 +74,9 @@ export default {
     color: orange;
   }
 
-  nav a:hover {
-    color: orangered; /* Change to your desired hover color */
-  }
+  /* nav a:hover {
+    color: orangered; 
+  } */
   nav a::after {
  content: '';
  position: absolute;
@@ -112,12 +112,19 @@ nav a:hover::after {
 }
 #logoImg1{
   
-  width:60px;
-  height:36px;
+  width:55px;
+  height:32px;
 }
 #logoImg2{
 width:45px;
   height:45px;
-  margin-top:-5px;
+  margin-top:-7px;
+}
+
+#github{
+  font-size:40px;
+}
+#linked{
+  font-size: 40px;
 }
 </style>
