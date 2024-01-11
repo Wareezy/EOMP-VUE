@@ -18,7 +18,10 @@
             <div class="box">
               <div class="icon">
                 <div id="location">
-                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  <a id="local" href="https://www.google.com/maps/place/5+Grysbok+Rd,+Lotus+River,+Cape+Town,+7805/@-34.0408817,18.5196088,17z/data=!3m1!4b1!4m5!3m4!1s0x1dcc43f80eb517a7:0x8b990bc3f895057e!8m2!3d-34.0408817!4d18.5221837?entry=ttu">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  </a>
+                
                 </div>
               </div>
               <div class="text">
@@ -43,7 +46,10 @@
             <div class="box">
               <div class="icon">
                 <div id="envelope">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <a id="email" href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&osid=1&passive=1209600&service=mail&ifkv=ASKXGp1termqY0qxdu1RkGETVQCQaGysRp5_i88dBMdgbM9yUR-L-1aOVFLDVe_RC1wsuuyQavgt&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </a>
+                
               </div>
               </div>
               <div class="text">
@@ -51,7 +57,21 @@
                 <p>warrenjaftha16@gmail.com</p>
               </div>
             </div>
+            <div class="box">
+              <div class="icon">
+                <div id="envelope">
+                  <a id="insta" href="https://www.instagram.com/war.eezy/">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                  </a>
+                
+              </div>
+              </div>
+              <div class="text">
+                <h3>instagram</h3>
+              </div>
+            </div>
           </div>
+          
           <div class="contactForm">
             <form  id="formOfContact" action="https://formspree.io/f/mayrnwqo" method="POST">
               <h2>Send Message</h2>
@@ -239,6 +259,15 @@ export default {
   font-size: 30px;
 }
 
+#insta{
+  color:white;
+}
+#local{
 
+  color:white;
+}
+#email{
 
+color:white;
+}
 </style>
