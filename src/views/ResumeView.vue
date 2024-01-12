@@ -441,7 +441,7 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -202px;
+    margin-left: -203px;
     margin-top: 49px;
 }
 
@@ -452,7 +452,7 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -202px;
+    margin-left: -203px;
     margin-top: 213px;
 }
 
@@ -463,7 +463,7 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -202px;
+    margin-left: -203px;
     margin-top: 400px;
 }
 
@@ -526,5 +526,22 @@ export default {
     margin-top: -123px;
 }
 
+#resumeLocation {
+    position: absolute;
+    margin-left: -220px;
+    margin-top: 131px;
+}
+
+#resumeEnvelope {
+    position: absolute;
+    margin-left: -220px;
+    margin-top: 100px;
+}
+
+#resumePhone {
+    position: absolute;
+    margin-left: -220px;
+    margin-top: 66px;
+}
 }
 </style>
