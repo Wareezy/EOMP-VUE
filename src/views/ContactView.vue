@@ -4,8 +4,9 @@
         <img id="phone" src="https://drive.google.com/uc?id=1dHSS7V8w6iEMTo0RXn9d-7_pzyQFKGgk">
         <img id="email" src="https://drive.google.com/uc?id=1GlWmEnpgGeOW8zdsEybxTou8yFNVxxD_"> -->
 
-    <div>
-        <section  id="cont">
+    <div id="contactInfo">
+     
+        <section  id="cont" >
         <div class="content">
           <h2 id="headingContact">Contact Us</h2>
           <p id="contactPara">We're delighted that you're here. Whether you have questions,
@@ -109,6 +110,7 @@
           </div>
         </div>
       </section>
+  
     </div>
 </template>
 <script>

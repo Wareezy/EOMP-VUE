@@ -33,7 +33,7 @@ to only start looping from that point onwards
       </div>
     </div>
     <div v-else>
-      <p>No information available.</p>
+      <p class="spinner-border"></p>
     </div>
   </div>
 </template>
