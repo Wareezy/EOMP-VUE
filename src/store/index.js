@@ -10,7 +10,9 @@ projects:[],
 education:[],
 skills:[],
 resumeContact:[],
-workExperience:[]
+workExperience:[],
+downloadHeading:[],
+downloadButtonText:[]
     
   },
 
@@ -41,6 +43,15 @@ workExperience:[]
     },
     setWorkExperience(state,value){
       state.workExperience=value
+    },
+    setDownloadHeading(state, value){
+      state.downloadHeading=value
+    },
+    setDownloadButtonText(state, value){
+      state.downloadButtonText=value
+    },
+    setDownloadLink(state, value){
+      state.downloadLink=value
     }
   },
   actions: {
@@ -143,7 +154,29 @@ catch(error){
   
 },
 
+async fetchDownloadHeading(context){
+  try{
+    let res=await fetch(dataUrl)
+  let {downloadHeading}=await res.json()
+  context.commit('setDownloadHeading',downloadHeading)
+}
+catch(error){
+  console.error('There was an error when fetching this particular data', error)
+}
+  
+},
 
+async fetchDownloadButtonText(context){
+  try{
+    let res=await fetch(dataUrl)
+  let {downloadButtonText}=await res.json()
+  context.commit('setDownloadButtonText',downloadButtonText)
+}
+catch(error){
+  console.error('There was an error when fetching this particular data', error)
+}
+  
+},
   },
   
   modules: {

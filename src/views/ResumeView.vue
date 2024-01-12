@@ -2,7 +2,7 @@
     <div>
         <div>
             <div
-                v-if="education && resumeContact && skills && workExperience && resumeContact.length && education.length && skills.length && workExperience.length > 0">
+                v-if="education && resumeContact && skills && workExperience && downloadButtonText && downloadHeading  && resumeContact.length && education.length && skills.length && workExperience.length && downloadButtonText.length  &&downloadHeading.length> 0">
                 <!-- this chunk of code is only used to call and display the 1 object which is found in the resume array -->
                 <div class="textProjects"
                     v-if="education[0].heading && education[0].name && education[0].title && education[0].image">
@@ -93,19 +93,44 @@
                 <div id="timeWork"></div>
                 <div id="dot1Work"></div>
                 <div id="dot2Work"></div>
-            </div>
-            <div v-else>
-                <p>No information available.</p>
-            </div>
-            <!-- <div v-if="resumeContact && resumeContact.length > 0"> -->
 
-            <!-- </div> -->
-        </div>
+
+                     <div v-for="info in downloadHeading" :key="info.downHead">
+                        <div id="resumeHeading">
+                        <h2>{{ info.downHead }}</h2>
+                        </div>
+                        </div>
+
+                    <div class="textProjects"
+                    v-if="downloadButtonText[0].downText && downloadButtonText[1].down">
+                    <div>
+                        <!-- here we are actually displaying it when calling the array resume we refer to the first object which is 0 and then we use dot
+            notation to reference values that is inside the object like title and description
+            -->
+                        <a :href="downloadButtonText[1].down">
+                        <button id="" class="btn btn-primary">{{ downloadButtonText[0].downText }}</button>
+                        </a>
+                        
+
+
+                    </div>
+                    </div>
+                
+                
+
+            </div>
+
+                <div v-else>
+                <p class="spinner-border"></p>
+
+                </div>
+                </div>
 
     </div>
 </template>
 <script>
 export default {
+    
     computed: {
         education() {
             return this.$store.state.education;
@@ -118,7 +143,15 @@ export default {
         },
         workExperience() {
             return this.$store.state.workExperience;
+        },
+        downloadHeading() {
+            return this.$store.state.downloadHeading;
+        },
+        downloadButtonText() {
+            return this.$store.state.downloadButtonText;
         }
+
+
 
 
     },
@@ -127,6 +160,9 @@ export default {
         this.$store.dispatch('fetchSkills');
         this.$store.dispatch('fetchResumeContact');
         this.$store.dispatch('fetchWorkExperience');
+        this.$store.dispatch('fetchDownloadHeading');
+        this.$store.dispatch('fetchDownloadButtonText');
+        
     }
 }
 </script>
@@ -255,19 +291,19 @@ export default {
 
 #resumeLocation {
     position: absolute;
-    margin-left: -295px;
+    margin-left: -380px;
     margin-top: -290px;
 }
 
 #resumeEnvelope {
     position: absolute;
-    margin-left: -297px;
+    margin-left: -383px;
     margin-top: -321px;
 }
 
 #resumePhone {
     position: absolute;
-    margin-left: -297px;
+    margin-left: -384px;
     margin-top: -355px;
 }
 
@@ -277,13 +313,13 @@ export default {
 
 #resumeSkills {
     position: absolute;
-    margin-left: 635px;
+    margin-left: 700px;
     margin-top: 90px;
 }
 
 #workHeading {
     position: absolute;
-    margin-left: 542px;
+    margin-left: 600px;
     margin-top: 30px;
 }
 
@@ -314,7 +350,7 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -530px;
+    margin-left: -617px;
     margin-top: -359px;
 }
 
@@ -325,7 +361,125 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -530px;
+    margin-left: -617px;
     margin-top: -150px;
+}
+
+#downButton{
+    width:100px;
+    height:50px;
+    z-index: 2;
+    }
+
+    #downHeading{
+        position:absolute;
+        margin-top:-60px;
+        margin-left:720px;
+        z-index: 1;
+    }
+
+
+    #resumeHeading{
+        margin-top:170px;
+        margin-left:5px;
+        font-size: 60px;
+    }
+
+    @media only screen and (max-width: 768px) {
+
+        #resumeImage {
+    position:absolute;
+    margin-top: -140px;
+    margin-left: -200px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+#resumeTitle {
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+#resumeName {
+    position: absolute;
+    margin-left: 440px;
+    margin-top: 16px;
+    font-size: 30px;
+}
+
+#resumeContact {
+    position: absolute;
+    margin-left: 40px;
+    text-align: left;
+    margin-top: 30px;
+}
+#educationHeading {
+    font-size: 20px;
+    margin-top: 70px;
+    margin-left: -240px
+}
+
+#time {
+    position: absolute;
+    width: 3px;
+    margin-top: 23px;
+    margin-left: 180px;
+    background-color: #fff;
+    height: 410px;
+    margin-right: 10px;
+
+}
+
+#dot1 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -178px;
+    margin-top: 42px;
+}
+
+#dot2 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -178px;
+    margin-top: 207px;
+}
+
+#dot3 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -178px;
+    margin-top: 375px;
+}
+
+#uni {
+    margin-top: 50px;
+    margin-left: 200px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+
+#resumeSkills {
+    position: absolute;
+    margin-left: 190px;
+    margin-top: 210px;
+}
+
 }
 </style>

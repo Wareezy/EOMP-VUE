@@ -31,7 +31,7 @@ to only start looping from that point onwards
       </div>
     </div>
     <div v-else>
-      <p>No information available.</p>
+      <p class="spinner-border"></p>
     </div>
   </div>
 </template>
@@ -74,4 +74,14 @@ export default {
 
 #cardTitle {
   font-weight: bold;
-}</style>
+}
+
+@media only screen and (max-width: 768px) {
+  #titleProjects {
+    /* Add any other styles you need for mobile devices */
+    position: absolute;
+    margin-left:138px;
+    text-align: center;
+  }
+}
+</style>
