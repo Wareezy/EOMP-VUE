@@ -385,7 +385,7 @@ export default {
         font-size: 60px;
     }
 
-    @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
         #resumeImage {
     position:absolute;
@@ -399,21 +399,21 @@ export default {
 
 #resumeTitle {
     position: absolute;
-    margin-left: 450px;
+    margin-left: 270px;
     margin-top: 50px;
     font-size: 20px;
 }
 
 #resumeName {
     position: absolute;
-    margin-left: 440px;
+    margin-left: 260px;
     margin-top: 16px;
     font-size: 30px;
 }
 
 #resumeContact {
     position: absolute;
-    margin-left: 40px;
+    margin-left: 50px;
     text-align: left;
     margin-top: 30px;
 }
@@ -427,9 +427,9 @@ export default {
     position: absolute;
     width: 3px;
     margin-top: 23px;
-    margin-left: 180px;
+    margin-left: 47px;
     background-color: #fff;
-    height: 410px;
+    height: 440px;
     margin-right: 10px;
 
 }
@@ -441,8 +441,8 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -178px;
-    margin-top: 42px;
+    margin-left: -202px;
+    margin-top: 49px;
 }
 
 #dot2 {
@@ -452,8 +452,8 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -178px;
-    margin-top: 207px;
+    margin-left: -202px;
+    margin-top: 213px;
 }
 
 #dot3 {
@@ -463,13 +463,13 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -178px;
-    margin-top: 375px;
+    margin-left: -202px;
+    margin-top: 400px;
 }
 
 #uni {
     margin-top: 50px;
-    margin-left: 200px;
+    margin-left: 78px;
     text-align: left;
     padding-bottom: 10px;
 }
@@ -479,6 +479,51 @@ export default {
     position: absolute;
     margin-left: 190px;
     margin-top: 210px;
+}
+
+#workHeading {
+    position: absolute;
+    margin-left: 130px;
+    margin-top: 30px;
+}
+#timeWork {
+    width: 3px;
+    margin-top: -410px;
+    margin-left: 30px;
+    background-color: #fff;
+    height: 370px;
+    margin-right: 10px;
+
+}
+
+#work {
+    margin-top: 140px;
+    margin-bottom: 80px;
+    margin-left: 70px;
+    text-align: left;
+    padding-bottom: 0px;
+}
+
+#dot1Work {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -220px;
+    margin-top: -350px;
+}
+
+#dot2Work {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -220px;
+    margin-top: -123px;
 }
 
 }
