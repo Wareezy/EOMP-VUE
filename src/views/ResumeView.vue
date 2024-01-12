@@ -107,8 +107,8 @@
                         <!-- here we are actually displaying it when calling the array resume we refer to the first object which is 0 and then we use dot
             notation to reference values that is inside the object like title and description
             -->
-                        <a :href="downloadButtonText[1].down">
-                        <button id="" class="btn btn-primary">{{ downloadButtonText[0].downText }}</button>
+                        <a  :href="downloadButtonText[1].down">
+                        <button id="btnDown" class="btn btn-warning">{{ downloadButtonText[0].downText }}</button>
                         </a>
                         
 
@@ -385,6 +385,21 @@ export default {
         font-size: 60px;
     }
 
+#btnDown {
+  animation: pulsate 1.5s ease-in-out infinite; /* Adjust the duration as needed */
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @media only screen and (max-width: 768px) {
 
         #resumeImage {
