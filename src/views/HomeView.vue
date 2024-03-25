@@ -2,11 +2,11 @@
   <div>
     <div class="row" v-if="home && home.length > 0">
       <div v-for="person in home" :key="person.name">
-        <div class="textHome">
+        <div class="textHome ">
         <h2 id="homeName">{{ person.name }}</h2>
         <h3 id="homeTitle">{{ person.title }}</h3>
         <p id="homeDescription">{{ person.description }}</p>
-      </div>
+       </div>
         <img id="homeImage" :src="person.coverImage" alt="Cover Image">
       </div>
     </div>
