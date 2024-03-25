@@ -23,7 +23,7 @@ to only start looping from that point onwards
                 <h5 id="cardTitle" class="card-title">{{ info.name }}</h5>
                 <p class="card-text">{{ info.description }}</p>
                 <a :href="info.gitHub" id="btnGIT" class="btn btn-warning">Github</a>
-                <a :href="info.netlify" id="btnNET" class="btn btn-warning">Netlify</a>
+                <a :href="info.hosted" id="btnNET" class="btn btn-warning">Hosted</a>
               </div>
             </div>
           </div>
