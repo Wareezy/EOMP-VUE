@@ -27,7 +27,7 @@
               </div>
               <div class="text">
                 <h3>Address</h3>
-                <p>5 Grysbok Avenue,</p>
+                <p>Cape Town,</p>
                 <p>Lotus River,</p>
                 <p>7941</p>
               </div>
