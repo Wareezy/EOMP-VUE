@@ -107,4 +107,37 @@ export default {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* Add a subtle box shadow on hover */
 }
+.card {
+  flex: 1;
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -5px; /* Adjust as needed */
+  left: -5px; /* Adjust as needed */
+  right: -5px; /* Adjust as needed */
+  bottom: -5px; /* Adjust as needed */
+  border: 2px solid transparent;
+  z-index: -1; /* Push the pseudo-element behind the card content */
+  border-radius: 10px;
+  animation: glow 2s infinite alternate;
+  /* Apply pulsating glow animation */
+}
+
+@keyframes glow {
+  0% {
+    border-color: rgba(255, 165, 0, 0.7);
+    /* Start with a visible orange border */
+    box-shadow: 0 0 10px 0 rgba(255, 165, 0, 0.7);
+    /* Initial shadow */
+  }
+  100% {
+    border-color: rgba(255, 165, 0, 0);
+    /* Fade out the border color */
+    box-shadow: 0 0 20px 10px rgba(255, 165, 0, 0);
+    /* Increase shadow size to create pulsating glow effect */
+  }
+}
 </style>
