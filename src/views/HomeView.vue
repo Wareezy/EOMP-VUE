@@ -31,7 +31,6 @@ export default {
 
 <style>
 
-
 #homeImage {
   margin-top: -290px;
   margin-right: -1160px;
@@ -60,32 +59,36 @@ export default {
   margin-left: 80px;
 }
 
+
 @media screen and (max-width: 400px) {
   #homeImage {
-    margin-top: 50px !important;
-  margin-right: -50px !important;
-  width: 300px;
-  height:300px;
-  }
+    position:relative;
+    margin-top: 50px;
+    margin-right: -50px;
+    width: 300px;
+    height: 300px;
+ }
 
-  .textHome {
-    margin-top: 20px !important;
-    margin-right: 0 !important;
-    text-align: center !important;
-    margin-top: 50px !important;
-  }
+ .textHome {
+    margin-top: 20px;
+    margin-right: 0;
+    text-align: center;
+ }
 
-  #homeName,
-  #homeTitle,
-  #homeDescription {
-    position: relative !important;
-    margin: 0 !important;
-    text-align: center !important;
-  }
+ #homeName,
+ #homeTitle,
+ #homeDescription {
+    position: relative;
+    margin: 0;
+    text-align: center;
+ }
 
-  body {
-    overflow-x: hidden !important;
-  }
-}
+ body {
+    overflow-x: hidden;
+ }
+}</style>
 
-</style>
+
+
+
+

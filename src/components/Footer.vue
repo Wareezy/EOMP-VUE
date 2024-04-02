@@ -1,6 +1,6 @@
 <template >
    <footer id ="footer" class="bg-dark text-white py-3">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <p class="lead">
         Warren's Portfolio &copy;
@@ -25,6 +25,5 @@ export default {
 <style >
     #footer{
         margin-top: 70px;
-        width:100% !important;
     }
 </style>

@@ -49,7 +49,7 @@ export default {
 </script>
 <style>
       nav {
-    padding: 30px;
+    /* padding: 30px; */
 
   }
 
