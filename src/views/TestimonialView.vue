@@ -56,15 +56,16 @@ export default {
 
 #title {
   position: absolute;
-  margin-top: -230px;
+  margin-top: -140px;
   margin-left: 650px;
+  font-size: 34px;
 }
 
 #titleDescription {
   position: absolute;
-  margin-top: -140px;
-  margin-left: 450px;
-  font-size: 28px;
+  margin-top: -75px;
+  margin-left: 520px;
+  font-size: 20px;
 }
 
 .row {
