@@ -2,11 +2,11 @@
   <div>
     <div class="row" v-if="home && home.length > 0">
       <div v-for="person in home" :key="person.name">
-        <div class="textHome ">
-        <h2 id="homeName">{{ person.name }}</h2>
-        <h3 id="homeTitle">{{ person.title }}</h3>
-        <p id="homeDescription">{{ person.description }}</p>
-       </div>
+        <div class="textHome">
+          <h2 id="homeName">{{ person.name }}</h2>
+          <h3 id="homeTitle">{{ person.title }}</h3>
+          <p id="homeDescription">{{ person.description }}</p>
+        </div>
         <img id="homeImage" :src="person.coverImage" alt="Cover Image">
       </div>
     </div>
@@ -60,26 +60,31 @@ export default {
   margin-left: 80px;
 }
 
-/* Media Query for Small Screens (e.g., Mobile Devices) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
   #homeImage {
-    margin-top: 30px;
-    margin-right: 0;
+    margin-top: 50px !important;
+  margin-right: -50px !important;
+  width: 300px;
+  height:300px;
   }
 
   .textHome {
-    margin-top: 20px;
-    margin-right: 0;
-    text-align: center;
-    margin-top:50px
+    margin-top: 20px !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    margin-top: 50px !important;
   }
 
   #homeName,
   #homeTitle,
   #homeDescription {
-    position: relative;
-    margin: 0;
-    text-align: center;
+    position: relative !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  body {
+    overflow-x: hidden !important;
   }
 }
 
