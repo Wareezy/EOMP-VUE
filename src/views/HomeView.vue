@@ -14,6 +14,7 @@
       <p class="spinner-border"></p>
     </div>
   </div>
+  <div id="orangeBar"></div>
 </template>
 
 <script>
@@ -29,8 +30,12 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
+#orangeBar {
+  height: 160px;
+  margin-top:-300px;
+  background-color: orange;
+}
 #homeImage {
   margin-top: -290px;
   margin-right: -1160px;

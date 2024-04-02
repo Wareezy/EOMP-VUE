@@ -2,7 +2,7 @@
   <div>
     <div class="row" v-if="about && about.length > 0">
       <div v-for="info in about" :key="info.title">
-        <div class="textHome">
+        <div><div class="textHome">
           <div ><h2 id="titleHome">{{ info.title }}</h2> </div>
         <div id="textAbout">
         <p id="p1">{{ info.description1 }}</p>
@@ -14,6 +14,8 @@
         <p id="p7">{{ info.description7 }}</p>
       </div>
       </div>
+    </div>
+        
         <img id="aboutImage" :src="info.homeImage" alt="Cover Image">
       </div>
     </div>
@@ -21,6 +23,7 @@
       <p class="spinner-border"></p>
     </div>
   </div>
+  <div id="orangeBar"></div>
 </template>
 
 <script>
@@ -36,7 +39,12 @@ export default{
 };
 </script>
 
-<style>
+<style scoped>
+#orangeBar {
+  height: 300px;
+  margin-top:-480px;
+  background-color: orange;
+}
 #aboutImage{
 height:600px;
 width:500px;
