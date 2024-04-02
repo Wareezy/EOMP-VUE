@@ -166,7 +166,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 #resumeHeading {
     margin-left: 50px;
     margin-top: 30px;
@@ -400,12 +400,12 @@ export default {
     transform: scale(1);
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 400px) {
 
         #resumeImage {
     position:absolute;
     margin-top: -140px;
-    margin-left: -200px;
+    margin-left: -180px;
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -414,21 +414,21 @@ export default {
 
 #resumeTitle {
     position: absolute;
-    margin-left: 270px;
-    margin-top: 50px;
-    font-size: 20px;
+    margin-left: 225px;
+    margin-top: 60px;
+    font-size: 13px;
 }
 
 #resumeName {
     position: absolute;
-    margin-left: 260px;
-    margin-top: 16px;
-    font-size: 30px;
+    margin-left: 220px;
+    margin-top: 25px;
+    font-size: 23px;
 }
 
 #resumeContact {
     position: absolute;
-    margin-left: 50px;
+    margin-left: 90px;
     text-align: left;
     margin-top: 30px;
 }
@@ -444,7 +444,7 @@ export default {
     margin-top: 23px;
     margin-left: 47px;
     background-color: #fff;
-    height: 440px;
+    height: 500px;
     margin-right: 10px;
 
 }
@@ -456,7 +456,7 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -203px;
+    margin-left: -156px;
     margin-top: 49px;
 }
 
@@ -467,8 +467,8 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -203px;
-    margin-top: 213px;
+    margin-left: -156px;
+    margin-top: 237px;
 }
 
 #dot3 {
@@ -478,8 +478,8 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -203px;
-    margin-top: 400px;
+    margin-left: -156px;
+    margin-top: 420px;
 }
 
 #uni {
@@ -492,13 +492,16 @@ export default {
 
 #resumeSkills {
     position: absolute;
-    margin-left: 190px;
+    margin-left: 168px;
     margin-top: 210px;
+}
+.card{
+    margin-left:-40px;
 }
 
 #workHeading {
     position: absolute;
-    margin-left: 130px;
+    margin-left: 90px;
     margin-top: 30px;
 }
 #timeWork {
@@ -526,7 +529,7 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -220px;
+    margin-left: -174px;
     margin-top: -350px;
 }
 
@@ -537,25 +540,26 @@ export default {
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin-left: -220px;
+    margin-left: -174px;
     margin-top: -123px;
 }
 
+
 #resumeLocation {
     position: absolute;
-    margin-left: -220px;
+    margin-left: -150px;
     margin-top: 131px;
 }
 
 #resumeEnvelope {
     position: absolute;
-    margin-left: -220px;
+    margin-left: -150px;
     margin-top: 100px;
 }
 
 #resumePhone {
     position: absolute;
-    margin-left: -220px;
+    margin-left: -150px;
     margin-top: 66px;
 }
 }

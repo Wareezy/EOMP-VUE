@@ -41,7 +41,7 @@ export default{
   }
 body{
   background-color: black !important;
-  overflow-x: hidden; /* Add this line to remove horizontal scrolling */
+  overflow-x: hidden;
   margin: 0;
     padding: 0;
 

@@ -76,12 +76,15 @@ export default {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 400px) {
   #titleProjects {
     /* Add any other styles you need for mobile devices */
     position: absolute;
-    margin-left:138px;
+    margin-left:90px;
     text-align: center;
+  }
+  .card{
+    margin-left:-50px;
   }
 }
 </style>

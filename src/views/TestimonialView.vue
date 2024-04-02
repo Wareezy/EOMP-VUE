@@ -81,14 +81,14 @@ export default {
   flex: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   #title {
-    margin-left: 145px;
+    margin-left: 110px;
   }
 
   #titleDescription {
     margin-left: 10px;
-    font-size: 23px;
+    font-size: 20px;
   }
 
   .grids {
