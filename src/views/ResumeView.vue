@@ -2,7 +2,7 @@
     <div>
         <div>
             <div
-                v-if="education && resumeContact && skills && workExperience && downloadButtonText && downloadHeading  && resumeContact.length && education.length && skills.length && workExperience.length && downloadButtonText.length  &&downloadHeading.length> 0">
+                v-if="education && resumeContact && skills && workExperience && downloadButtonText && downloadHeading  && resumeContact.length && education.length && skills.length && hobbies.length && workExperience.length && downloadButtonText.length  &&downloadHeading.length> 0">
                 <!-- this chunk of code is only used to call and display the 1 object which is found in the resume array -->
                 <div class="textProjects"
                     v-if="education[0].heading && education[0].name && education[0].title && education[0].image">
@@ -10,7 +10,7 @@
                         <!-- here we are actually displaying it when calling the array resume we refer to the first object which is 0 and then we use dot
             notation to reference values that is inside the object like title and description
             -->
-                        <h1 id="resumeHeading">{{ education[0].heading }}</h1>
+                        <!-- <h1 id="resumeHeading">{{ education[0].heading }}</h1> -->
                         <div id="bar">
                             <h2 id="resumeName">{{ education[0].name }}</h2>
                             <h2 id="resumeTitle">{{ education[0].title }}</h2>
@@ -31,6 +31,8 @@
                 <div id="dot1"></div>
                 <div id="dot2"></div>
                 <div id="dot3"></div>
+                <div id="dot4"></div>
+                <div id="dot5"></div>
                 <div v-for="info in education.slice(2)" :key="info.id">
 
                     <div id="uni">
@@ -43,14 +45,34 @@
 
                 </div>
 
-                <div v-for="info in resumeContact" :key="info.heading">
+                <!-- <div v-for="info in resumeContact" :key="info.heading">
                     <div id="resumeContact">
                         <h5>{{ info.heading }}</h5>
                         <h5>{{ info.phone }}</h5>
                         <h5>{{ info.email }}</h5>
                         <h5>{{ info.address }}</h5>
                     </div>
-                </div>
+                </div> -->
+                <div v-for="info in downloadHeading" :key="info.downHead">
+                        <div id="downHeading">
+                        <h2>{{ info.downHead }}</h2>
+                        </div>
+                        </div>
+
+                    <div class="textProjects"
+                    v-if="downloadButtonText[0].downText && downloadButtonText[1].down">
+                    <div>
+                        <!-- here we are actually displaying it when calling the array resume we refer to the first object which is 0 and then we use dot
+            notation to reference values that is inside the object like title and description
+            -->
+                        <a  :href="downloadButtonText[1].down">
+                        <button id="btnDown" class="btn btn-warning">{{ downloadButtonText[0].downText }}</button>
+                        </a>
+                        
+
+
+                    </div>
+                    </div>
 
                 <div v-if="skills[0].heading">
                     <div id="resumeSkills">
@@ -58,9 +80,9 @@
                     </div>
 
                 </div>
-                <div id="resumeEnvelope" class="fa fa-envelope"></div>
+                <!-- <div id="resumeEnvelope" class="fa fa-envelope"></div>
                 <div id="resumePhone" class="fa fa-phone"></div>
-                <div id="resumeLocation" class="fas fa-map-marker-alt"></div>
+                <div id="resumeLocation" class="fas fa-map-marker-alt"></div> -->
                 <div class="grids">
                     <div class="row">
                         <div class="col-md-4" v-for="info in skills.slice(1)" :key="info.title">
@@ -74,6 +96,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div v-if="workExperience[0].heading">
                     <div id="workHeading">
                         <h1 id="">{{ workExperience[0].heading }}</h1>
@@ -95,38 +118,43 @@
                 <div id="dot2Work"></div>
 
 
-                     <div v-for="info in downloadHeading" :key="info.downHead">
-                        <div id="resumeHeading">
-                        <h2>{{ info.downHead }}</h2>
-                        </div>
-                        </div>
-
-                    <div class="textProjects"
-                    v-if="downloadButtonText[0].downText && downloadButtonText[1].down">
-                    <div>
-                        <!-- here we are actually displaying it when calling the array resume we refer to the first object which is 0 and then we use dot
-            notation to reference values that is inside the object like title and description
-            -->
-                        <a  :href="downloadButtonText[1].down">
-                        <button id="btnDown" class="btn btn-warning">{{ downloadButtonText[0].downText }}</button>
-                        </a>
-                        
-
-
-                    </div>
-                    </div>
+                   
                 
                 
+<div v-if="hobbies[0].heading">
+                    <div id="hobbies">
+                        <h1 id="">{{ hobbies[0].heading }}</h1>
+                    </div>
 
+                </div>
+                <div class="grids">
+                    <div class="row">
+                        <div class="col-md-4" v-for="info in hobbies.slice(1)" :key="info.title">
+                            <div class="card mb-4" style="width:18rem;">
+                                <img id="testimonialImage" :src="info.image" alt="Cover Image">
+                                <div class="card-body">
+                                    <h2 class="card-title">{{ info.title }}</h2>
+                                    <p class="card-text">{{ info.experience }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
                 <div v-else>
                 <p class="spinner-border"></p>
 
                 </div>
-                </div>
 
-    </div>
+
+<!-- this is going to be my hobbies -->
+              
+ 
+                
+
+    </div>  
+  </div> 
 </template>
 <script>
 export default {
@@ -141,6 +169,10 @@ export default {
         skills() {
             return this.$store.state.skills;
         },
+        hobbies(){
+            return this.$store.state.hobbies;
+        }
+        ,
         workExperience() {
             return this.$store.state.workExperience;
         },
@@ -158,6 +190,7 @@ export default {
     mounted() {
         this.$store.dispatch('fetchEducation');
         this.$store.dispatch('fetchSkills');
+        this.$store.dispatch('fetchHobbies');
         this.$store.dispatch('fetchResumeContact');
         this.$store.dispatch('fetchWorkExperience');
         this.$store.dispatch('fetchDownloadHeading');
@@ -167,11 +200,11 @@ export default {
 }
 </script>
 <style scoped>
-#resumeHeading {
+/* #resumeHeading {
     margin-left: 50px;
     margin-top: 30px;
     font-size: 60px
-}
+} */
 
 #resumeTitle {
     position: absolute;
@@ -194,6 +227,7 @@ export default {
     height: 300px;
     border-radius: 50%;
     border: 5px solid white;
+    box-shadow: 0 0 10px orange; /* Adjust the spread radius and color as needed */
 }
 
 
@@ -201,13 +235,14 @@ export default {
     background-color: orange;
     height: 100px;
     width: 100%;
-    margin-top: 100px
+    margin-top: 100px;
+    box-shadow: 0 0 10px orange;
 }
 
 #educationHeading {
-    font-size: 20px;
-    margin-top: -100px;
-    margin-left: 270px
+    font-size: 40px;
+    margin-top: -60px;
+    margin-left: 650px
 }
 
 #uni {
@@ -242,7 +277,7 @@ export default {
     margin-top: 23px;
     margin-left: 870px;
     background-color: #fff;
-    height: 410px;
+    height: 780px;
     margin-right: 10px;
 
 }
@@ -282,14 +317,36 @@ export default {
     margin-top: 375px;
 }
 
-#resumeContact {
+#dot4 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 102px;
+    margin-top: 540px;
+}
+
+
+#dot5 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 102px;
+    margin-top: 710px;
+}
+/* #resumeContact {
     position: absolute;
     margin-left: 400px;
     text-align: left;
     margin-top: -390px;
-}
+} */
 
-#resumeLocation {
+/* #resumeLocation {
     position: absolute;
     margin-left: -380px;
     margin-top: -290px;
@@ -305,7 +362,7 @@ export default {
     position: absolute;
     margin-left: -384px;
     margin-top: -355px;
-}
+} */
 
 #grids {
     position: absolute;
@@ -341,7 +398,11 @@ export default {
 
 }
 
-
+#hobbies {
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 90px;
+}
 
 #dot1Work {
     position: absolute;
@@ -367,26 +428,30 @@ export default {
 
 #downButton{
     width:100px;
+    margin-left:100px;
     height:50px;
     z-index: 2;
     }
 
-    #downHeading{
-        position:absolute;
-        margin-top:-60px;
-        margin-left:720px;
-        z-index: 1;
-    }
+  
 
 
     #resumeHeading{
         margin-top:170px;
-        margin-left:5px;
+        margin-left:-100px;
         font-size: 60px;
     }
-
+#downHeading
+{
+position:absolute;
+margin-top:-600px;
+margin-left:150px;
+z-index: 1;
+}
 #btnDown {
   animation: pulsate 1.5s ease-in-out infinite; /* Adjust the duration as needed */
+  margin-top:-1000px;
+  margin-left:-900px;
 }
 
 @keyframes pulsate {
@@ -401,8 +466,33 @@ export default {
   }
 }
 @media only screen and (max-width: 400px) {
+    /* #resumeHeading{
+        margin-top:170px;
+        margin-left:5px;
+        font-size: 60px;
+    } */
 
-        #resumeImage {
+    #hobbies {
+        position: absolute;
+    margin-left: 150px;
+    margin-top: 290px;
+}
+
+    #downHeading
+{
+position:absolute;
+margin-top:80px;
+margin-left:80px;
+z-index: 1;
+}
+#btnDown {
+    position:absolute;
+  animation: pulsate 1.5s ease-in-out infinite; /* Adjust the duration as needed */
+  margin-top:130px;
+  margin-left:-33px;
+}
+
+#resumeImage {
     position:absolute;
     margin-top: -140px;
     margin-left: -180px;
@@ -433,18 +523,22 @@ export default {
     margin-top: 30px;
 }
 #educationHeading {
-    font-size: 20px;
+    font-size: 29px;
     margin-top: 70px;
-    margin-left: -240px
+    margin-left: 10px
 }
 
+#description{
+    margin-left:2px;
+    margin-bottom:10px;
+}
 #time {
     position: absolute;
     width: 3px;
     margin-top: 23px;
     margin-left: 47px;
     background-color: #fff;
-    height: 500px;
+    height: 670px;
     margin-right: 10px;
 
 }
@@ -468,7 +562,7 @@ export default {
     border-radius: 50%;
     display: inline-block;
     margin-left: -156px;
-    margin-top: 237px;
+    margin-top: 220px;
 }
 
 #dot3 {
@@ -479,7 +573,18 @@ export default {
     border-radius: 50%;
     display: inline-block;
     margin-left: -156px;
-    margin-top: 420px;
+    margin-top: 410px;
+}
+
+#dot4 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -156px;
+    margin-top: 590px;
 }
 
 #uni {
@@ -493,10 +598,11 @@ export default {
 #resumeSkills {
     position: absolute;
     margin-left: 168px;
-    margin-top: 210px;
+    margin-top: 290px;
 }
 .card{
     margin-left:-40px;
+    margin-top:100px;
 }
 
 #workHeading {
@@ -516,7 +622,7 @@ export default {
 
 #work {
     margin-top: 140px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     margin-left: 70px;
     text-align: left;
     padding-bottom: 0px;
@@ -530,7 +636,7 @@ export default {
     border-radius: 50%;
     display: inline-block;
     margin-left: -174px;
-    margin-top: -350px;
+    margin-top: -340px;
 }
 
 #dot2Work {
@@ -541,11 +647,11 @@ export default {
     border-radius: 50%;
     display: inline-block;
     margin-left: -174px;
-    margin-top: -123px;
+    margin-top: -90px;
 }
 
 
-#resumeLocation {
+/* #resumeLocation {
     position: absolute;
     margin-left: -150px;
     margin-top: 131px;
@@ -561,6 +667,6 @@ export default {
     position: absolute;
     margin-left: -150px;
     margin-top: 66px;
-}
+} */
 }
 </style>

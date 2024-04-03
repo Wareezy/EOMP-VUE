@@ -9,6 +9,7 @@ testimonials:[],
 projects:[],
 education:[],
 skills:[],
+hobbies:[],
 resumeContact:[],
 workExperience:[],
 downloadHeading:[],
@@ -37,6 +38,9 @@ downloadButtonText:[]
     },
     setSkills(state,value){
       state.skills=value
+    },
+    setHobbies(state,hobbies){
+state.hobbies=hobbies
     },
     setResumeContact(state,value){
       state.resumeContact=value
@@ -135,6 +139,18 @@ async fetchSkills(context){
     let res=await fetch(dataUrl)
   let {skills}=await res.json()
   context.commit('setSkills',skills)
+}
+catch(error){
+  console.error('There was an error when fetching this particular data', error)
+}
+  
+},
+
+async fetchHobbies(context){
+  try{
+    let res=await fetch(dataUrl)
+  let {hobbies}=await res.json()
+  context.commit('setHobbies',hobbies)
 }
 catch(error){
   console.error('There was an error when fetching this particular data', error)

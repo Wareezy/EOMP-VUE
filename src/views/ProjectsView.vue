@@ -22,8 +22,8 @@ to only start looping from that point onwards
               <div class="card-body">
                 <h5 id="cardTitle" class="card-title">{{ info.name }}</h5>
                 <p class="card-text">{{ info.description }}</p>
-                <a :href="info.gitHub" id="btnGIT" class="btn btn-warning">Github</a>
-                <a :href="info.hosted" id="btnNET" class="btn btn-warning">Hosted</a>
+                <a :href="info.github" id="btnGIT" target="_blank" class="btn btn-warning">Github</a>
+                <a :href="info.hosted" id="btnNET" target="_blank" class="btn btn-warning">Hosted</a>
               </div>
             </div>
           </div>

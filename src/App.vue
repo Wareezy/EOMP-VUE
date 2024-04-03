@@ -46,5 +46,11 @@ body{
     padding: 0;
 
 }
+@media screen and (max-width: 400px) {
+  body{
+      overflow-x:hidden;
+  }
+
+}
 
 </style>
