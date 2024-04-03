@@ -35,6 +35,7 @@ export default {
   height: 160px;
   margin-top:-300px;
   background-color: orange;
+  box-shadow: 0 0 10px orange;
 }
 #homeImage {
   margin-top: -290px;
@@ -68,14 +69,21 @@ export default {
 @media screen and (max-width: 400px) {
   #homeImage {
     position:relative;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-right: -50px;
     width: 300px;
     height: 300px;
  }
 
+ #orangeBar {
+  height: 130px;
+  margin-top:-230px;
+  background-color: orange;
+  box-shadow: 0 0 10px orange;
+}
+
  .textHome {
-    margin-top: 20px;
+    margin-top: 100px;
     margin-right: 0;
     text-align: center;
  }

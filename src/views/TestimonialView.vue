@@ -84,7 +84,8 @@ export default {
 
 @media (max-width: 400px) {
   #title {
-    margin-left: 110px;
+    margin-left: 88px;
+    margin-top:-205px;
   }
 
   #titleDescription {

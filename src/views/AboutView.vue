@@ -44,6 +44,7 @@ export default{
   height: 300px;
   margin-top:-480px;
   background-color: orange;
+  box-shadow: 0 0 10px orange;
 }
 #aboutImage{
 height:600px;
@@ -100,6 +101,12 @@ margin-left:80px
 }
 
 @media screen and (max-width: 400px) {
+  #orangeBar {
+  height: 220px;
+  margin-top:-420px;
+  background-color: orange;
+  box-shadow: 0 0 10px orange;
+}
   #aboutImage {
     height: auto;
     width: 100%;
