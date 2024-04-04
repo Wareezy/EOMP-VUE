@@ -57,10 +57,10 @@ export default {
 }
 
 #titleProjects {
-  position: absolute;
+ position: absolute;
   font-size: 50px;
-  margin-top: -130px;
-  margin-left: 656px;
+  margin-top: 10px !important;
+  margin-left: 650px !important;
 }
 
 .grids {
@@ -79,9 +79,10 @@ export default {
 @media only screen and (max-width: 400px) {
   #titleProjects {
     /* Add any other styles you need for mobile devices */
-    position: absolute;
-    margin-left:90px;
+position:absolute;
+    margin-left:95px !important;
     text-align: center;
+    margin-top:-100px !important;
   }
   .card{
     margin-left:-50px;

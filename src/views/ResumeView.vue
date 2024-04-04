@@ -108,6 +108,7 @@
                     <div id="work">
                         <h5 id="description">{{ info.description }}</h5>
                         <h5 id="year">{{ info.duration }}</h5>
+                        <h5 id="position">{{ info.position }}</h5>
                         <h5 id="type">{{ info.reference }}</h5>
                     </div>
 
@@ -116,7 +117,7 @@
                 <div id="timeWork"></div>
                 <div id="dot1Work"></div>
                 <div id="dot2Work"></div>
-
+                <div id="dot3Work"></div>
 
                    
                 
@@ -221,7 +222,7 @@ export default {
 }
 
 #resumeImage {
-    margin-top: -190px;
+    margin-top: -200px;
     margin-left: -400px;
     width: 300px;
     height: 300px;
@@ -235,7 +236,7 @@ export default {
     background-color: orange;
     height: 100px;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 300px;
     box-shadow: 0 0 10px orange;
 }
 
@@ -255,7 +256,9 @@ export default {
 #description {
     font-size: 15px;
 }
-
+#position {
+    font-size: 15px;
+}
 #place {
     font-size: 15px;
 
@@ -390,10 +393,10 @@ export default {
 
 #timeWork {
     width: 3px;
-    margin-top: -410px;
+    margin-top: -660px;
     margin-left: 150px;
     background-color: #fff;
-    height: 410px;
+    height: 630px;
     margin-right: 10px;
 
 }
@@ -412,7 +415,7 @@ export default {
     border-radius: 50%;
     display: inline-block;
     margin-left: -617px;
-    margin-top: -359px;
+    margin-top: -600px;
 }
 
 #dot2Work {
@@ -423,7 +426,18 @@ export default {
     border-radius: 50%;
     display: inline-block;
     margin-left: -617px;
-    margin-top: -150px;
+    margin-top: -360px;
+}
+
+#dot3Work {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -617px;
+    margin-top: -120px;
 }
 
 #downButton{
@@ -474,8 +488,7 @@ z-index: 1;
 
     #hobbies {
         position: absolute;
-    margin-left: 150px;
-    margin-top: 290px;
+    margin-left: 150px !important;
 }
 
     #downHeading
@@ -538,7 +551,7 @@ z-index: 1;
     margin-top: 23px;
     margin-left: 47px;
     background-color: #fff;
-    height: 670px;
+    height: 850px;
     margin-right: 10px;
 
 }
@@ -573,7 +586,7 @@ z-index: 1;
     border-radius: 50%;
     display: inline-block;
     margin-left: -156px;
-    margin-top: 410px;
+    margin-top: 395px;
 }
 
 #dot4 {
@@ -584,7 +597,18 @@ z-index: 1;
     border-radius: 50%;
     display: inline-block;
     margin-left: -156px;
-    margin-top: 590px;
+    margin-top: 578px;
+}
+
+#dot5 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -156px;
+    margin-top: 760px;
 }
 
 #uni {
@@ -595,10 +619,12 @@ z-index: 1;
 }
 
 
+
 #resumeSkills {
     position: absolute;
-    margin-left: 168px;
-    margin-top: 290px;
+    font-size: 15px !important;
+    margin-top: 305px !important;
+    margin-left: 170px !important
 }
 .card{
     margin-left:-40px;
@@ -608,20 +634,20 @@ z-index: 1;
 #workHeading {
     position: absolute;
     margin-left: 90px;
-    margin-top: 30px;
+    margin-top: 30px !important;
 }
 #timeWork {
     width: 3px;
-    margin-top: -410px;
+    margin-top: -680px;
     margin-left: 30px;
     background-color: #fff;
-    height: 370px;
+    height: 700px;
     margin-right: 10px;
 
 }
 
 #work {
-    margin-top: 140px;
+    margin-top: 160px !important;
     margin-bottom: 50px;
     margin-left: 70px;
     text-align: left;
@@ -636,7 +662,7 @@ z-index: 1;
     border-radius: 50%;
     display: inline-block;
     margin-left: -174px;
-    margin-top: -340px;
+    margin-top: -680px;
 }
 
 #dot2Work {
@@ -647,8 +673,19 @@ z-index: 1;
     border-radius: 50%;
     display: inline-block;
     margin-left: -174px;
-    margin-top: -90px;
+    margin-top: -430px;
 }
+#dot3Work {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -174px;
+    margin-top: -180px;  
+}
+
 
 
 /* #resumeLocation {

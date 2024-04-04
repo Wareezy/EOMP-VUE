@@ -56,14 +56,14 @@ export default {
 
 #title {
   position: absolute;
-  margin-top: -140px;
-  margin-left: 650px;
+  margin-top: 10px;
+  margin-left: 660px;
   font-size: 34px;
 }
 
 #titleDescription {
   position: absolute;
-  margin-top: -75px;
+  margin-top: 75px;
   margin-left: 520px;
   font-size: 20px;
 }
@@ -80,17 +80,21 @@ export default {
 
 .card {
   flex: 1;
+  margin-top:-17px !important;
 }
 
 @media (max-width: 400px) {
   #title {
-    margin-left: 88px;
-    margin-top:-205px;
+    position:absolute;
+    margin-left: 90px;
+    margin-top:-100px;
   }
 
   #titleDescription {
+    position:absolute;
+    margin-top:-50px;
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .grids {
@@ -112,6 +116,7 @@ export default {
 .card {
   flex: 1;
   position: relative;
+  margin-top:120px  !important;
 }
 
 .card::before {

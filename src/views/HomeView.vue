@@ -38,12 +38,12 @@ export default {
   box-shadow: 0 0 10px orange;
 }
 #homeImage {
-  margin-top: -290px;
+  margin-top: -280px;
   margin-right: -1160px;
 }
 
 .textHome {
-  margin-top: 300px;
+  margin-top: 420px;
   margin-right: 900px;
 }
 
@@ -77,13 +77,14 @@ export default {
 
  #orangeBar {
   height: 130px;
+  width:100% !important;
   margin-top:-230px;
   background-color: orange;
   box-shadow: 0 0 10px orange;
 }
 
  .textHome {
-    margin-top: 100px;
+    margin-top: 170px;
     margin-right: 0;
     text-align: center;
  }

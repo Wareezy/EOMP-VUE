@@ -1,12 +1,12 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="/">
           <img id="logo" src="https://i.imgur.com/9aCiQmp.png" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon text-white"></span>
+          <span class="navbar-toggler-icon " ></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
@@ -59,7 +59,8 @@ export default {
 
 <style>
 nav {
-  /* padding: 30px; */
+   padding: 30px; 
+  padding-bottom:-80px !important;
 }
 
 nav a {
