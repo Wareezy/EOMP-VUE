@@ -67,35 +67,36 @@ font-size:60px ;
 
 /* paragraph css */
 #textAbout{
-  margin-top:300px;
+  margin-top:440px;
+  font-size: 20px;
 }
 #p1{position:absolute;
-margin-top:-50px;
+margin-top:-65px;
 margin-left:80px
 }
 #p2{position:absolute;
-margin-top:-24px;
+margin-top:-40px;
 margin-left:80px
 }
 #p3{position:absolute;
-margin-top:4px;
+margin-top:-13px;
 margin-left:80px
 }
 #p4{position:absolute;
-margin-top:32px;
+margin-top:14px;
 margin-left:80px
 }
 #p5{position:absolute;
-margin-top:63px;
+margin-top:40px;
 margin-left:80px
 
 }
 #p6{position:absolute;
-margin-top:93px;
+margin-top:70px;
 margin-left:80px
 }
 #p7{position:absolute;
-margin-top:120px;
+margin-top:99px;
 margin-left:80px
 
 }
@@ -111,20 +112,20 @@ margin-left:80px
     height: auto;
     width: 100%;
     margin: 0px;
-    margin-top: 630px;
+    margin-top: 1000px;
   }
 
   #titleHome {
     margin: 20px 0 0;
     text-align: center;
     font-size: 40px;
-    margin-top: 25px;
+    margin-top: 160px;
     margin-left: 140px;
   }
 
   #textAbout {
     position: absolute;
-    margin-top: 120px;
+    margin-top: 250px;
     text-align: center;
     padding: 0 40px;
     

@@ -171,10 +171,7 @@ export default {
   background-size: cover;
   font-size: 20px;
 }
-#headingContact {
-  margin-top: 100px;
-  font-size: 45px;
-}
+
 .containerContact {
   width: 100%;
   display: flex;
@@ -205,6 +202,11 @@ export default {
 }
 
 */
+#headingContact {
+  position:relative !important;
+  margin-top: 190px !important;
+  font-size: 45px;
+}
 .containerContact .contactInfo .box .text h3 {
   font-weight: 500;
   color: rgb(39, 142, 86);

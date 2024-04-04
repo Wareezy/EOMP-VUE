@@ -24,6 +24,9 @@ export default {
 </script>
 <style >
     #footer{
-        margin-top: 400px;
+        margin-top: 500px;
+        
+        padding-bottom:2px !important;
     }
+
 </style>
