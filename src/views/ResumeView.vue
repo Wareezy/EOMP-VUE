@@ -65,7 +65,7 @@
                         <!-- here we are actually displaying it when calling the array resume we refer to the first object which is 0 and then we use dot
             notation to reference values that is inside the object like title and description
             -->
-                        <a  :href="downloadButtonText[1].down">
+                        <a  :href="downloadButtonText[1].down" target="_blank">
                         <button id="btnDown" class="btn btn-warning">{{ downloadButtonText[0].downText }}</button>
                         </a>
                         
