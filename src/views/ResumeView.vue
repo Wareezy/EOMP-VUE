@@ -2,7 +2,7 @@
     <div>
         <div>
             <div
-                v-if="education && resumeContact && skills && workExperience && downloadButtonText && downloadHeading  && resumeContact.length && education.length && skills.length && hobbies.length && workExperience.length && downloadButtonText.length  &&downloadHeading.length> 0">
+                v-if="education && resumeContact && skills && workExperience && downloadButtonText && downloadHeading && badges && resumeContact.length && education.length && skills.length && hobbies.length && badges.length && workExperience.length && downloadButtonText.length  &&downloadHeading.length> 0">
                 <!-- this chunk of code is only used to call and display the 1 object which is found in the resume array -->
                 <div class="textProjects"
                     v-if="education[0].heading && education[0].name && education[0].title && education[0].image">
@@ -141,6 +141,27 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div v-if="badges[0].heading">
+    <div id="badges">
+        <h1 id="">{{ badges[0].heading }}</h1>
+    </div>
+</div>
+<div class="grids">
+    <div class="row centered-cards">
+        <div class="col-md-4" v-for="info in badges.slice(1)" :key="info.title">
+            <div class="card mb-4" style="width:18rem;">
+                <img id="testimonialImage" :src="info.image" alt="Cover Image">
+                <div class="card-body">
+                    <h2 class="card-title">{{ info.title }}</h2>
+                    <p class="card-text">{{ info.experience }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>      
+        
             </div>
 
                 <div v-else>
@@ -172,6 +193,9 @@ export default {
         },
         hobbies(){
             return this.$store.state.hobbies;
+        },
+        badges(){
+            return this.$store.state.badges;
         }
         ,
         workExperience() {
@@ -192,6 +216,7 @@ export default {
         this.$store.dispatch('fetchEducation');
         this.$store.dispatch('fetchSkills');
         this.$store.dispatch('fetchHobbies');
+        this.$store.dispatch('fetchBadges');
         this.$store.dispatch('fetchResumeContact');
         this.$store.dispatch('fetchWorkExperience');
         this.$store.dispatch('fetchDownloadHeading');
@@ -206,7 +231,39 @@ export default {
     margin-top: 30px;
     font-size: 60px
 } */
+.centered-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    min-height: 300px; /* Set a minimum height for the card */
+    display: flex;
+    flex-direction: column;
+}
 
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    padding: 20px; /* Add some padding around the content */
+}
+
+
+
+.center-cards.row {
+    display: flex;
+    justify-content: center;
+}
+
+.center-cards.col-md-4 {
+    max-width: 100%;
+}
+
+.card-img-top {
+    width: 100%; /* Ensures the image takes up the full width of its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+}
 #resumeTitle {
     position: absolute;
     margin-left: 854px;
@@ -406,7 +463,11 @@ export default {
     margin-left: 700px;
     margin-top: 90px;
 }
-
+#badges {
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 90px;
+}
 #dot1Work {
     position: absolute;
     width: 20px;
@@ -490,7 +551,10 @@ z-index: 1;
         position: absolute;
     margin-left: 150px !important;
 }
-
+#badges {
+        position: absolute;
+    margin-left: 150px !important;
+}
     #downHeading
 {
 position:absolute;
