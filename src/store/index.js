@@ -10,6 +10,7 @@ projects:[],
 education:[],
 skills:[],
 hobbies:[],
+badges:[],
 resumeContact:[],
 workExperience:[],
 downloadHeading:[],
@@ -41,6 +42,10 @@ downloadButtonText:[]
     },
     setHobbies(state,hobbies){
 state.hobbies=hobbies
+    },
+    setBadges(state,badges)
+    {
+      state.badges=badges
     },
     setResumeContact(state,value){
       state.resumeContact=value
@@ -157,6 +162,19 @@ catch(error){
 }
   
 },
+
+async fetchBadges(context){
+  try{
+    let res=await fetch(dataUrl)
+  let {badges}=await res.json()
+  context.commit('setBadges',badges)
+}
+catch(error){
+  console.error('There was an error when fetching this particular data', error)
+}
+  
+},
+
 
 async fetchWorkExperience(context){
   try{
