@@ -142,28 +142,28 @@
                     </div>
                 </div>
 
-
                 <div v-if="badges[0].heading">
-    <div id="badges">
-        <h1 id="">{{ badges[0].heading }}</h1>
-    </div>
+<div id="hobbies">
+<h1 id="">{{badges[0].heading}}</h1>
 </div>
-<div class="grids">
-    <div class="row centered-cards">
-        <div class="col-md-4" v-for="info in badges.slice(1)" :key="info.title">
-            <div class="card mb-4" style="width:18rem;">
-                <img id="testimonialImage" :src="info.image" alt="Cover Image">
-                <div class="card-body">
-                    <h2 class="card-title">{{ info.title }}</h2>
-                    <p class="card-text">{{ info.experience }}</p>
-                </div>
-            </div>
+</div>
+<div class="cards-container">
+  <div class="card mb-3" style="max-width: 540px;" v-for="info in badges.slice(1)" :key="info.title">
+    <div class="row no-gutters">
+      <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+        <!-- Adjusted img tag with object-fit and sizing -->
+        <img id="badgesImage" :src="info.image" alt="Cover Image" >
+      </div>
+      <div class="col-12 col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">{{ info.title }}</h2>
+          <p class="card-text">{{ info.experience }}</p>
         </div>
+      </div>
     </div>
-</div>      
-        
+  </div>
+</div>
             </div>
-
                 <div v-else>
                 <p class="spinner-border"></p>
 
@@ -342,6 +342,9 @@ export default {
 
 }
 
+#badgesImage{
+    width: 100%; height: auto; object-fit: contain;margin-left:40px;margin-top:50px
+}
 
 
 #dot1 {
@@ -529,6 +532,8 @@ z-index: 1;
   margin-left:-900px;
 }
 
+
+
 @keyframes pulsate {
   0% {
     transform: scale(1);
@@ -546,6 +551,23 @@ z-index: 1;
         margin-left:5px;
         font-size: 60px;
     } */
+    #badgesImage{
+    width: 80%; height: auto; object-fit: contain;margin-left:2px;
+}
+    .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  margin-left:60px;
+  margin-right:19px;
+}
+
+
 
     #hobbies {
         position: absolute;
@@ -769,5 +791,12 @@ z-index: 1;
     margin-left: -150px;
     margin-top: 66px;
 } */
+}
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  margin-top:150px;
+  align-items: center;
+  gap: 20px; /* Optional: Adds some space between cards */
 }
 </style>
