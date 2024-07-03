@@ -7,16 +7,15 @@
           <!-- here we are actually displaying it when calling the array testimonials we refer to the first object which is 0 and then we use dot
             notation to reference values that is inside the object like title and description
             -->
-          <h1 id="titleProjects">{{ projects[0].titleProjects }}</h1>
+          <h1 id="titleProjects" data-aos="zoom-in-up" data-aos-delay="400">{{ projects[0].titleProjects }}</h1>
         </div>
       </div>
       <!-- now when we start with the second v-for i call the "info in testimonials" but what i also used was a .slice(1) which tells the software
-
 to only start looping from that point onwards
 -->
       <div class="grids">
         <div class="row">
-          <div class="col-md-4" v-for="info in projects.slice(1)" :key="info.name">
+          <div data-aos="zoom-in-up" data-aos-delay="600" class="col-md-4" v-for="info in projects.slice(1)" :key="info.name">
             <div class="card mb-4" style="width:18rem;">
               <img id="testimonialImage" :src="info.image" alt="Cover Image">
               <div class="card-body">
@@ -45,7 +44,6 @@ export default {
   mounted() {
     this.$store.dispatch('fetchProjects');
   }
-
 }
 </script>
 <style >
@@ -55,32 +53,27 @@ export default {
   object-fit: cover;
   /* This property ensures the image covers the entire space while maintaining aspect ratio */
 }
-
 #titleProjects {
  position: absolute;
   font-size: 50px;
   margin-top: 10px !important;
   margin-left: 650px !important;
 }
-
 .grids {
   margin-top: 190px;
 }
-
 #btnGIT {
   margin-right: 10px;
   /* Adjust the margin-right value as needed for the desired spacing */
 }
-
 #cardTitle {
   font-weight: bold;
 }
-
 @media only screen and (max-width: 400px) {
   #titleProjects {
     /* Add any other styles you need for mobile devices */
 position:absolute;
-    margin-left:95px !important;
+    margin-left:80px !important;
     text-align: center;
     margin-top:-100px !important;
   }
