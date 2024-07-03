@@ -2,8 +2,7 @@
   <!-- <img id="location" src="https://drive.google.com/uc?id=1fzVI2w-rWYu7swGpmdoAJaLEkrqVErGC">
     <img id="phone" src="https://drive.google.com/uc?id=1dHSS7V8w6iEMTo0RXn9d-7_pzyQFKGgk">
     <img id="email" src="https://drive.google.com/uc?id=1GlWmEnpgGeOW8zdsEybxTou8yFNVxxD_"> -->
-
-  <div id="contactInfo" class="container-fluid">
+  <div id="contactInfo" class="container-fluid" data-aos="zoom-in-up" >
     <section id="cont">
       <div class="content">
         <h2 id="headingContact" class="display-4 mt-4 mb-4">CONTACT US</h2>
@@ -32,7 +31,6 @@
               <p>7941</p>
             </div>
           </div>
-
           <div class="box">
             <div class="icon">
               <div id="phone">
@@ -95,13 +93,11 @@
               <input type="email" name="email" placeholder="Email" v-model="email" data-sendingEmail />
               <!-- <span>Email</span> -->
             </div>
-
             <div class="inputBox">
               <!-- validation is included by each field with a error message that gets displayed -->
               <textarea required="required" placeholder="Type your message" name="message" v-model="message" data-sendingMessage></textarea>
               <!-- <span>Type your message...</span> -->
             </div>
-
             <div class="inputBox">
               <input type="submit" sendingButton name="" value="Send" />
             </div>
@@ -110,9 +106,6 @@
         </div>
       </div>
       <div class="containerContact">
-        
-
-        
       </div>
     </section>
   </div>
@@ -142,7 +135,6 @@ export default {
     initializeForm() {
       // declaring the button that will be used to send the data to form spree
       let sendingButton = document.querySelector("[sendingButton]");
-
       // calling the sending button and adding an event listener to the button that, when clicked, has a setTimeout attached to it
       sendingButton.addEventListener("click", () => {
         // the set timeout is set to 1 second and within the setTimeout, we are calling the clearTheForm method
@@ -171,7 +163,6 @@ export default {
   background-size: cover;
   font-size: 20px;
 }
-
 .containerContact {
   width: 100%;
   display: flex;
@@ -179,19 +170,16 @@ export default {
   align-items: center;
   margin-top: 70px;
 }
-
 .containerContact .containerInfo {
   width: 50%;
   display: flex;
   flex-direction: column;
 }
-
 .containerContact .contactInfo .box {
   position: relative;
   padding: 20px 0;
   display: flex;
 }
-
 .containerContact .contactInfo .box .text {
   display: flex;
   margin-left: 20px;
@@ -200,7 +188,6 @@ export default {
   flex-direction: column;
   font-weight: 300;
 }
-
 */
 #headingContact {
   position:relative !important;
@@ -211,26 +198,22 @@ export default {
   font-weight: 500;
   color: rgb(39, 142, 86);
 }
-
 .contactForm {
   /* width: 40%; */
   /* padding: 40px; */
   /* margin-left: 60px; */
   background: #fff;
 }
-
 .contactForm h2 {
   font-size: 30px;
   color: #333;
   font-weight: 500;
 }
-
 .contactForm .inputBox {
   position: relative;
   width: 100%;
   margin-top: 10px;
 }
-
 .contactForm .inputBox input,
 .contactForm .inputBox textarea {
   width: 50%;
@@ -252,16 +235,14 @@ export default {
   transition: 0.5s;
   color: #666;
 }
-
 .contactForm .inputBox input:focus ~ span,
 .contactForm .inputBox input:valid ~ span,
 .contactForm .inputBox textarea:focus ~ span,
 .contactForm .inputBox textarea:valid ~ span {
-  color: #e91e63;
+  color: #E91E63;
   font-size: 12px;
   transform: translateY(-20px);
 }
-
 .contactForm .inputBox input[type="submit"] {
   width: 100px;
   background: rgb(236, 171, 7);
@@ -277,11 +258,9 @@ export default {
 #phone {
   font-size: 30px;
 }
-
 #envelope {
   font-size: 30px;
 }
-
 #insta {
   color: white;
 }
